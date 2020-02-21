@@ -8,7 +8,7 @@ describe('User can visit the welcome page') do
     expect(page).to have_content("Search for a Book")
     expect(page).to have_button("Find Book")
 
-    fill_in :title, with: "The Man Who Saw Everything"
+    fill_in :title, with: "Normal People"
     click_on "Find Book"
 
     expect(current_path).to eq(search_path)
