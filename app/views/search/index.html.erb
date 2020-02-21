@@ -1,15 +1,16 @@
 <h1> <%= search_result.book_title%> </h1>
 
 <section class="book">
-      <p class="title"><% search_result.book_title %></p>
-      <p class="author"><%= search_result.book_author %></p>
+      <p class="title">Title: <%= search_result.book_title %></p>
+      <p class="author">Author: <%= search_result.book_author %></p>
       <section class="genres">
+      Genres:
         <%search_result.book_genre.each do |genre| %>
           <p> <%= genre %> </p>
         <%end  %>
       </section>
 </section>
-
+<br>
 <section>
     <% search_result.get_reviews.each do |review| %>
     <section class="reviews">
