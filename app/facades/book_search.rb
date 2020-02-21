@@ -20,4 +20,8 @@ class BookSearch
     service = BookService.new.get_book(@title)
       @book ||= Book.new(service)
   end
+
+  def reviews
+    service = ReviewService.new.get_reviews(@title)
+  end
 end
