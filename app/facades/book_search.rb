@@ -10,8 +10,6 @@ class BookSearch
 
   def book
     service = BookService.new.get_book(@title)
-      @book ||= service.map do |data|
-        Book.new(data)
-    end
+      @book ||= Book.new(service)
   end
 end
