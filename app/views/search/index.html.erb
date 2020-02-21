@@ -13,8 +13,8 @@
 <section>
     <% search_result.reviews.each do |review| %>
     <section class="reviews">
-      <%=review.title %>
-      <%=review.publication_date%>
+      <p>Review: <%=review.summary %></p>
+      <p>Review Publication Date: <%=review.publication_date%></p>
     </section>
     <%end  %>
 </section>
