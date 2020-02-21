@@ -26,9 +26,8 @@ describe('User can visit the welcome page') do
     expect(page).to have_css(".reviews", count: 2)
 
       within(first(".reviews")) do
-        expect(page).to have_content("Review 1")
-        expect(page).to have_content("Normal People")
-        expect(page).to have_content("Review Publication Date")
+        expect(page).to have_content("Review")
+        expect(page).to have_content("Review Publication Date: 2019-04-08")
       end
   end
 end
