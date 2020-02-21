@@ -2,8 +2,8 @@ class Book
   attr_reader :title, :author, :genre
   def initialize(data)
 require "pry"; binding.pry
-    @title = data["title"]
-    @author = data["author"]
-    @genre = data["genre"]
+    @title = data[:docs].first[:title_suggest]
+    @author = data[:docs].first[:author_name]
+    @genre = data[:docs][2][:subject]
   end
 end
