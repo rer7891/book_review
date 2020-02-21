@@ -9,3 +9,12 @@
         <%end  %>
       </section>
 </section>
+
+<section>
+    <% search_result.reviews.each do |review| %>
+    <section class="reviews">
+      <%=review.title %>
+      <%=review.publication_date%>
+    </section>
+    <%end  %>
+</section>
