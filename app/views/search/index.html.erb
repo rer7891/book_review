@@ -11,7 +11,7 @@
 </section>
 
 <section>
-    <% search_result.reviews.each do |review| %>
+    <% search_result.get_reviews.each do |review| %>
     <section class="reviews">
       <p>Review: <%=review.summary %></p>
       <p>Review Publication Date: <%=review.publication_date%></p>

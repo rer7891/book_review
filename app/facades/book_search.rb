@@ -16,6 +16,12 @@ class BookSearch
     book.genre
   end
 
+  def get_reviews
+    reviews
+  end
+
+  private
+
   def book
     service = BookService.new.get_book(@title)
       @book ||= Book.new(service)
@@ -25,6 +31,6 @@ class BookSearch
     service = ReviewService.new.get_reviews(@title)
     @reviews ||= service[:results].map do |data|
       Review.new(data)
-    end 
+    end
   end
 end
