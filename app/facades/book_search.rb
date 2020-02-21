@@ -23,5 +23,8 @@ class BookSearch
 
   def reviews
     service = ReviewService.new.get_reviews(@title)
+    @reviews ||= service[:results].map do |data|
+      Review.new(data)
+    end 
   end
 end
